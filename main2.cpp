@@ -63,8 +63,8 @@ int main(int argc, char *argv[]) {
             continue;
         }
         auto [res_x, _] = LINEAR_REGRESSION::make_experiment(INPUT_SIZE, D1, x, y, N, selected_id);
-        output_in << res_x.E_in * res_x.E_in - res_z.E_in * res_z.E_in << '\n';
-        output_out << res_x.E_out * res_x.E_out - res_z.E_out * res_z.E_out << '\n';
+        output_in << res_x.E_in - res_z.E_in << '\n';
+        output_out << res_x.E_out - res_z.E_out << '\n';
         #ifdef PRINT
         cout << "EXPERIMENT #" << i << ": " << endl;
         cout << res_x.E_in << ' ' << res_x.E_out << endl;

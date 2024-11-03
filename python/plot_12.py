@@ -15,6 +15,6 @@ for i in range(N):
 sum /= N
 
 plt.xscale("symlog")
-plt.hist(E_out, bins = [-1e16, -1e15, -1e14, -1e13, -1e12, -1e11, -1e10, -1e9, -1e8, -1e7])
+plt.hist(E_out, bins = [-1e8, -1e7, -1e6, -1e5, -1e4, -1e3, -1e2, -1e1, 0])
 plt.title(f"average E_out change: {sum}")
 plt.savefig(sys.argv[1])
